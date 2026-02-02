@@ -15,7 +15,7 @@ The workflow is triggered by the following events:
 ### Push Events
 - **main branch**: Triggers build, test, and deployment
 - **develop branch**: Triggers build and test only
-- **release/** branches**: Triggers build and test
+- **release/* branches**: Triggers build and test
 
 ### Pull Request Events
 - **Pull requests to main**: Triggers build and test
