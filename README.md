@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/badge/Version-1.2.0-blue)](https://github.com/WARlord05/SpeedyHighway/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2064--bit-lightgrey)](https://github.com/WARlord05/SpeedyHighway)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/WARlord05/SpeedyHighway/blob/main/LICENSE)
+[![CI/CD](https://github.com/RonitARK/SpeedyHighway/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/RonitARK/SpeedyHighway/actions/workflows/ci-cd.yml)
 
 ## 🎮 Overview
 
@@ -267,6 +268,18 @@ Add `SpeedyHighway.exe` to your antivirus whitelist/exclusions:
 - **Executable Location**: Root folder (`SpeedyHighway.exe`)
 - **Antivirus Compatibility**: Disabled UPX, enhanced metadata
 
+### CI/CD Pipeline
+
+The project includes an automated CI/CD pipeline using GitHub Actions:
+
+- **Automated Builds**: Automatically builds the game on every push and pull request
+- **Code Quality**: Runs linting and security checks on all code changes
+- **Automated Testing**: Validates the build process and project structure
+- **Deployment**: Automatically creates releases for main branch updates
+- **Artifacts**: Build artifacts are available in GitHub Actions for 30 days
+
+For detailed information about the CI/CD pipeline, see [CI/CD Documentation](docs/CI_CD_DOCUMENTATION.md).
+
 ## 📁 Project Structure
 
 ```text
@@ -334,6 +347,7 @@ The game includes comprehensive data persistence that automatically handles:
 - **Release Notes**: `RELEASE_NOTES_v1.1.0.md` (NEW)
 - **Technical Details**: `project/PROJECT_STRUCTURE.txt`
 - **Comprehensive Guide**: `docs/PROJECT_DOCUMENTATION.md`
+- **CI/CD Pipeline**: `docs/CI_CD_DOCUMENTATION.md` (NEW)
 
 ## 🎉 Enjoy the Game
 
