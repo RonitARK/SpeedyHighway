@@ -22,6 +22,11 @@ jobs:
     name: Build and Test
     runs-on: windows-latest
     
+    # Explicit permissions for security (principle of least privilege)
+    permissions:
+      contents: read  # Required to checkout code
+      actions: read   # Required to access artifacts
+    
     steps:
       # Step 1: Checkout the repository code
       - name: Checkout code
@@ -118,6 +123,11 @@ jobs:
     needs: build  # Only run after build job succeeds
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     
+    # Explicit permissions for security (principle of least privilege)
+    permissions:
+      contents: write  # Required to create releases and upload assets
+      actions: read    # Required to download artifacts
+    
     steps:
       # Step 1: Checkout code
       - name: Checkout code
@@ -182,6 +192,10 @@ jobs:
   code-quality:
     name: Code Quality Report
     runs-on: ubuntu-latest
+    
+    # Explicit permissions for security (principle of least privilege)
+    permissions:
+      contents: read  # Required to checkout code
     
     steps:
       # Step 1: Checkout code
